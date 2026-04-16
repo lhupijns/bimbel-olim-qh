@@ -1,0 +1,94 @@
+/* Custom Fonts setup */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.font-arabic {
+    font-family: 'Amiri', serif;
+    line-height: 2.2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Custom Scrollbar for better look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9; 
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b; 
+}
+
+/* Option Button Styles */
+.option-btn {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid #e2e8f0;
+    background-color: white;
+    color: #334155;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.option-btn.selected {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.option-btn.correct {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+    color: #166534;
+}
+
+.option-btn.wrong {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+.option-letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    margin-right: 12px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.option-btn.correct .option-letter {
+    background-color: #22c55e;
+    color: white;
+}
+.option-btn.wrong .option-letter {
+    background-color: #ef4444;
+    color: white;
+}
